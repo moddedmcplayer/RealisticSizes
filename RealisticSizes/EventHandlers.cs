@@ -63,7 +63,7 @@ namespace RealisticSizes.Handlers
                 NetworkIdentity identity = ply.GameObject.GetComponent<NetworkIdentity>();
                 ply.GameObject.transform.localScale = new Vector3(1 * Scale2, 1 * Scale1, 1 * Scale2);
 
-                ObjectDestroyMessage destroyMessage = new ObjectDestroyMessage();
+                /*ObjectDestroyMessage destroyMessage = new ObjectDestroyMessage();
                 destroyMessage.netId = identity.netId;
 
                 foreach (GameObject player in PlayerManager.players)
@@ -74,7 +74,7 @@ namespace RealisticSizes.Handlers
 
                     object[] parameters = new object[] { identity, playerCon };
                     typeof(NetworkServer).InvokeStaticMethod("SendSpawnMessage", parameters);
-                }
+                }*/
             }
             catch (Exception e)
             {
